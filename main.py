@@ -10,4 +10,8 @@ print("Adding another arbitrary print statement.")
 Adding some text as docstring.
 Commit succeded.
 Trying second time.
+
+Closing VSC and opening it again without Win10 restart.
+
+Above sentence was staged. Now trying staging again with this sentence.
 """
