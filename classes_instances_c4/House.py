@@ -49,4 +49,3 @@ class House:
             Price of the house with decimal places.
         """
         self.price = price
-        pass
