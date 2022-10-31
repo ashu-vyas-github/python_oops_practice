@@ -37,7 +37,7 @@ class Backpack:
     (Placeholder for now, will be updated later.)
     """
 
-    def __init__(self, items):
+    def __init__(self, items=[]):
         """
         Backpack class constructor method for object initialization.
 
@@ -49,9 +49,15 @@ class Backpack:
             Items that are contained in the backpack. Initially, it is empty.
             Eg: items=["Pen", "Waterbottle", "Blanket"]
         """
-        self.items = []
+        self.items = items
 
 
-my_backpack = Backpack(items=[])
+my_backpack = Backpack()
+print("\nDefault argument...")
+print("Object is at:", my_backpack)
+print("List of items currently in the backpack:", my_backpack.items)
+
+my_backpack = Backpack(items=["Waterbottle", "Pen", "Blanket"])
+print("\nPassing argument...")
 print("Object is at:", my_backpack)
 print("List of items currently in the backpack:", my_backpack.items)

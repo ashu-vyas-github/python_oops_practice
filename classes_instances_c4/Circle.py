@@ -37,7 +37,7 @@ class Circle:
     (Placeholder for now, will be updated later.)
     """
 
-    def __init__(self, radius, color):
+    def __init__(self, radius=3.5, color="Blue"):
         """
         Circle class constructor method for object initialization.
 
@@ -56,7 +56,14 @@ class Circle:
         self.color = color
 
 
+my_circle = Circle()
+print("\nDefault argument...")
+print("Object is at:", my_circle)
+print("Radius:", my_circle.radius)
+print("Color:", my_circle.color)
+
 my_circle = Circle(radius=100, color="Red")
+print("\nPassing argument...")
 print("Object is at:", my_circle)
 print("Radius:", my_circle.radius)
 print("Color:", my_circle.color)

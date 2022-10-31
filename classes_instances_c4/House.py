@@ -37,7 +37,7 @@ class House:
     (Placeholder for now, will be updated later.)
     """
 
-    def __init__(self, price):
+    def __init__(self, price=250000.42):
         """
         House class constructor method for object initialization.
 
@@ -52,6 +52,12 @@ class House:
         self.price = price
 
 
+my_house = House()
+print("\nDefault argument...")
+print("Object is at:", my_house)
+print("Price of the house:", my_house.price, "USD.")
+
 my_house = House(price=500000)
+print("\nPassing argument...")
 print("Object is at:", my_house)
 print("Price of the house:", my_house.price, "USD.")

@@ -37,7 +37,7 @@ class Rectangle:
     (Placeholder for now, will be updated later.)
     """
 
-    def __init__(self, length, width):
+    def __init__(self, length=3.5, width=1.5):
         """
         Rectangle class constructor method for object initialization.
 
@@ -56,7 +56,14 @@ class Rectangle:
         self.width = width
 
 
+my_rectangle = Rectangle()
+print("\nDefault argument...")
+print("Object is at:", my_rectangle)
+print("Length:", my_rectangle.length)
+print("Width:", my_rectangle.width)
+
 my_rectangle = Rectangle(length=10.5, width=7.5)
+print("\nPassing argument...")
 print("Object is at:", my_rectangle)
 print("Length:", my_rectangle.length)
 print("Width:", my_rectangle.width)

@@ -37,7 +37,7 @@ class Movie:
     (Placeholder for now, will be updated later.)
     """
 
-    def __init__(self, title, year, language, rating):
+    def __init__(self, title="The Godfather", year=1972, language="English", rating=9):
         """
         Movie class constructor method for object initialization.
 
@@ -65,7 +65,16 @@ class Movie:
         self.rating = rating
 
 
+my_movie = Movie()
+print("\nDefault argument...")
+print("Object is at:", my_movie)
+print("Title:", my_movie.title)
+print("Year:", my_movie.year)
+print("Language:", my_movie.language)
+print("Rating:", my_movie.rating)
+
 my_movie = Movie(title="Fantastic Four", year=2005, language="English", rating=9)
+print("\nPassing argument...")
 print("Object is at:", my_movie)
 print("Title:", my_movie.title)
 print("Year:", my_movie.year)
