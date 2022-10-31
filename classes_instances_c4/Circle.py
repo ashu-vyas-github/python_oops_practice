@@ -54,3 +54,7 @@ class Circle:
         """
         self.radius = radius
         self.color = color
+
+
+my_circle = Circle(radius=100, color="Red")
+print(my_circle)

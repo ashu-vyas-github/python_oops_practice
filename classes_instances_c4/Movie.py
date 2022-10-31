@@ -63,3 +63,7 @@ class Movie:
         self.year = year
         self.language = language
         self.rating = rating
+
+
+my_movie = Movie(title="Fantastic Four", year=2005, language="English", rating=9)
+print(my_movie)

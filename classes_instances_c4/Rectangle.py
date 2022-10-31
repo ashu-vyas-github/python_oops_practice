@@ -54,3 +54,7 @@ class Rectangle:
         """
         self.length = length
         self.width = width
+
+
+my_rectangle = Rectangle(length=10.5, width=7.5)
+print(my_rectangle)

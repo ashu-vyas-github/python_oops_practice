@@ -50,3 +50,7 @@ class Backpack:
             Eg: items=["Pen", "Waterbottle", "Blanket"]
         """
         self.items = []
+
+
+my_backpack = Backpack(items=[])
+print(my_backpack)

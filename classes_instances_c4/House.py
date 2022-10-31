@@ -50,3 +50,7 @@ class House:
             Eg: price=250000.42
         """
         self.price = price
+
+
+my_house = House(price=500000)
+print(my_house)
