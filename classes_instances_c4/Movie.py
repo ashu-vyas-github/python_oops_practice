@@ -80,3 +80,15 @@ print("Title:", my_movie.title)
 print("Year:", my_movie.year)
 print("Language:", my_movie.language)
 print("Rating:", my_movie.rating)
+
+my_movie = Movie(title="Fantastic Four", year=2005, language="English", rating=9)
+my_movie.title = "Avengers: Endgame"
+my_movie.year = 2019
+my_movie.language = "English"
+my_movie.rating = 10
+print("\nModifying passed argument...")
+print("Object is at:", my_movie)
+print("Title:", my_movie.title)
+print("Year:", my_movie.year)
+print("Language:", my_movie.language)
+print("Rating:", my_movie.rating)

@@ -67,3 +67,10 @@ print("\nPassing argument...")
 print("Object is at:", my_circle)
 print("Radius:", my_circle.radius)
 print("Color:", my_circle.color)
+
+my_circle.radius = 999
+my_circle.color = "Green"
+print("\nModifying passed argument...")
+print("Object is at:", my_circle)
+print("Radius:", my_circle.radius)
+print("Color:", my_circle.color)

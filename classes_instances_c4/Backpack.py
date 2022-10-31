@@ -61,3 +61,8 @@ my_backpack = Backpack(items=["Waterbottle", "Pen", "Blanket"])
 print("\nPassing argument...")
 print("Object is at:", my_backpack)
 print("List of items currently in the backpack:", my_backpack.items)
+
+my_backpack.items = ["Book", "Map", "Wallet"]
+print("\nModifying passed argument...")
+print("Object is at:", my_backpack)
+print("List of items currently in the backpack:", my_backpack.items)

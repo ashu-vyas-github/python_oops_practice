@@ -67,3 +67,10 @@ print("\nPassing argument...")
 print("Object is at:", my_rectangle)
 print("Length:", my_rectangle.length)
 print("Width:", my_rectangle.width)
+
+my_rectangle.length = 9999.5
+my_rectangle.width = 786.687
+print("\nModifying passed argument...")
+print("Object is at:", my_rectangle)
+print("Length:", my_rectangle.length)
+print("Width:", my_rectangle.width)

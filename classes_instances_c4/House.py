@@ -61,3 +61,8 @@ my_house = House(price=500000)
 print("\nPassing argument...")
 print("Object is at:", my_house)
 print("Price of the house:", my_house.price, "USD.")
+
+my_house.price = 999999999
+print("\nModifying passed argument...")
+print("Object is at:", my_house)
+print("Price of the house:", my_house.price, "USD.")
