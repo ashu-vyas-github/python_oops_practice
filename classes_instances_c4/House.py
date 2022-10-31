@@ -53,4 +53,5 @@ class House:
 
 
 my_house = House(price=500000)
-print(my_house)
+print("Object is at:", my_house)
+print("Price of the house:", my_house.price, "USD.")

@@ -57,4 +57,6 @@ class Circle:
 
 
 my_circle = Circle(radius=100, color="Red")
-print(my_circle)
+print("Object is at:", my_circle)
+print("Radius:", my_circle.radius)
+print("Color:", my_circle.color)

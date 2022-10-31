@@ -66,4 +66,8 @@ class Movie:
 
 
 my_movie = Movie(title="Fantastic Four", year=2005, language="English", rating=9)
-print(my_movie)
+print("Object is at:", my_movie)
+print("Title:", my_movie.title)
+print("Year:", my_movie.year)
+print("Language:", my_movie.language)
+print("Rating:", my_movie.rating)

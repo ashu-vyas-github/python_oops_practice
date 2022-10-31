@@ -53,4 +53,5 @@ class Backpack:
 
 
 my_backpack = Backpack(items=[])
-print(my_backpack)
+print("Object is at:", my_backpack)
+print("List of items currently in the backpack:", my_backpack.items)

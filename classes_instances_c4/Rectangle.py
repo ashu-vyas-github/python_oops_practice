@@ -57,4 +57,6 @@ class Rectangle:
 
 
 my_rectangle = Rectangle(length=10.5, width=7.5)
-print(my_rectangle)
+print("Object is at:", my_rectangle)
+print("Length:", my_rectangle.length)
+print("Width:", my_rectangle.width)
