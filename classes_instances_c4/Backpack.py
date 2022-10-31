@@ -45,8 +45,8 @@ class Backpack:
 
         Parameters
         ----------
-        items : list
+        items : List
             Items that are contained in the backpack. Initially, it is empty.
+            Eg: items=["Pen", "Waterbottle", "Blanket"]
         """
         self.items = []
-

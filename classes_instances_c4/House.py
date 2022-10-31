@@ -45,7 +45,8 @@ class House:
 
         Parameters
         ----------
-        price : float
+        price : Float
             Price of the house with decimal places.
+            Eg: price=250000.42
         """
         self.price = price
