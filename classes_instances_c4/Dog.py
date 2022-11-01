@@ -37,6 +37,8 @@ class Dog:
     (Placeholder for now, will be updated later.)
     """
 
+    species = "Canis lupus"
+
     def __init__(self, name="Rocky", age=3, breed="Labrador"):
         """
         Dog class constructor method for object initialization.
@@ -83,3 +85,5 @@ print("Object is at:", my_dog)
 print("Name of the dog:", my_dog.name)
 print("Age of the dog:", my_dog.age, "y.o.")
 print("Breed of the dog:", my_dog.breed)
+
+print("\nClass attribute:", Dog.species)

@@ -37,6 +37,8 @@ class Backpack:
     (Placeholder for now, will be updated later.)
     """
 
+    max_num_items = 10
+
     def __init__(self, items=[]):
         """
         Backpack class constructor method for object initialization.
@@ -66,3 +68,21 @@ my_backpack.items = ["Book", "Map", "Wallet"]
 print("\nModifying passed argument...")
 print("Object is at:", my_backpack)
 print("List of items currently in the backpack:", my_backpack.items)
+
+print("\nBackpack class access class attribute:", Backpack.max_num_items)
+print("my_backpack obect access class attribute:", my_backpack.max_num_items)
+
+my_backpack = Backpack()
+print("\nBefore modifying class attribute, default value declared inside class...")
+print("Max items via class:", Backpack.max_num_items)
+print("Max items via object:", my_backpack.max_num_items)
+
+Backpack.max_num_items = 99
+print("\nAfter modifying class attribute via class...")
+print("Max items via class:", Backpack.max_num_items)
+print("Max items via object:", my_backpack.max_num_items)
+
+my_backpack.max_num_items = 666
+print("\nAfter modifying class attribute via object...")
+print("Max items via class:", Backpack.max_num_items)
+print("Max items via object:", my_backpack.max_num_items)

@@ -37,6 +37,8 @@ class Circle:
     (Placeholder for now, will be updated later.)
     """
 
+    name = "Mr. Circle"
+
     def __init__(self, radius=3.5, color="Blue"):
         """
         Circle class constructor method for object initialization.
@@ -74,3 +76,17 @@ print("\nModifying passed argument...")
 print("Object is at:", my_circle)
 print("Radius:", my_circle.radius)
 print("Color:", my_circle.color)
+
+print("\nBefore modifying class attribute, default value declared inside class...")
+print("Name of the circle via class:", Circle.name)
+print("Name of the circle via object:", my_circle.name)
+
+Circle.name = "Mrs. Sphere"
+print("\nAfter modifying class attribute via class...")
+print("Name of the circle via class:", Circle.name)
+print("Name of the circle via object:", my_circle.name)
+
+my_circle.name = "Ms. Ring"
+print("\nAfter modifying class attribute via object...")
+print("Name of the circle via class:", Circle.name)
+print("Name of the circle via object:", my_circle.name)
