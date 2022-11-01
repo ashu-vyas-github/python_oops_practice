@@ -51,26 +51,26 @@ class Backpack:
             Items that are contained in the backpack. Initially, it is empty.
             Eg: items=["Pen", "Waterbottle", "Blanket"]
         """
-        self._items = items
+        self.__items = items
 
 
 my_backpack = Backpack()
 print("\nDefault argument...")
 print("Object is at:", my_backpack)
 # print("List of items currently in the backpack:", my_backpack.items)
-print("List of items currently in the backpack:", my_backpack._items)
+# print("List of items currently in the backpack:", my_backpack._items)
 
 my_backpack = Backpack(items=["Waterbottle", "Pen", "Blanket"])
 print("\nPassing argument...")
 print("Object is at:", my_backpack)
 # print("List of items currently in the backpack:", my_backpack.items)
-print("List of items currently in the backpack:", my_backpack._items)
+# print("List of items currently in the backpack:", my_backpack._items)
 
-my_backpack.items = ["Book", "Map", "Wallet"]
+# my_backpack.items = ["Book", "Map", "Wallet"]
 print("\nModifying passed argument...")
 print("Object is at:", my_backpack)
-print("List of items currently in the backpack:", my_backpack.items)
-print("List of items currently in the backpack:", my_backpack._items)
+# print("List of items currently in the backpack:", my_backpack.items)
+# print("List of items currently in the backpack:", my_backpack._items)
 
 print("\nBackpack class access class attribute:", Backpack.max_num_items)
 print("my_backpack obect access class attribute:", my_backpack.max_num_items)
@@ -89,3 +89,9 @@ my_backpack.max_num_items = 666
 print("\nAfter modifying class attribute via object...")
 print("Max items via class:", Backpack.max_num_items)
 print("Max items via object:", my_backpack.max_num_items)
+
+print("\nName mangling...")
+# print("List of items currently in the backpack:", my_backpack.items)
+# print("List of items currently in the backpack:", my_backpack._items)
+# print("List of items currently in the backpack:", my_backpack.__items)
+print("List of items currently in the backpack:", my_backpack._Backpack__items)
