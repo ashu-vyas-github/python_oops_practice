@@ -58,7 +58,7 @@ class Car:
         """
         self.brand = brand
         self.model = model
-        self.year = year
+        self._year = year
 
 
 my_car = Car(brand="Porsche", model="911 Carrera", year=2020)
@@ -66,7 +66,7 @@ print("\nPassing arguments...")
 print("Object is at:", my_car)
 print("Brand:", my_car.brand)
 print("Model:", my_car.model)
-print("Year:", my_car.year)
+print("Year:", my_car._year)
 
 my_car.year = 9999
 print("\nModifying passed argument...")
@@ -74,3 +74,4 @@ print("Object is at:", my_car)
 print("Brand:", my_car.brand)
 print("Model:", my_car.model)
 print("Year:", my_car.year)
+print("Year:", my_car._year)
