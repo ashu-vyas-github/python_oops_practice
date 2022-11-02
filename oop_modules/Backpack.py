@@ -51,31 +51,42 @@ class Backpack:
             Items that are contained in the backpack. Initially, it is empty.
             Eg: items=["Pen", "Waterbottle", "Blanket"]
         """
+        self.items = items
+        self._items = items
         self.__items = items
+
+    def get_items(self):
+        return self._items
+
+    def set_items(self, new_items):
+        if isinstance(new_items, list):
+            self._items = new_items
+        else:
+            print("Enter a valid list type datatype of items.")
 
 
 my_backpack = Backpack()
 print("\nDefault argument...")
 print("Object is at:", my_backpack)
-# print("List of items currently in the backpack:", my_backpack.items)
-# print("List of items currently in the backpack:", my_backpack._items)
+print("List of items currently in the backpack:", my_backpack.items)
+print("List of items currently in the backpack:", my_backpack._items)
 
 my_backpack = Backpack(items=["Waterbottle", "Pen", "Blanket"])
 print("\nPassing argument...")
 print("Object is at:", my_backpack)
-# print("List of items currently in the backpack:", my_backpack.items)
-# print("List of items currently in the backpack:", my_backpack._items)
+print("List of items currently in the backpack:", my_backpack.items)
+print("List of items currently in the backpack:", my_backpack._items)
 
-# my_backpack.items = ["Book", "Map", "Wallet"]
+my_backpack.items = ["Book", "Map", "Wallet"]
 print("\nModifying passed argument...")
 print("Object is at:", my_backpack)
-# print("List of items currently in the backpack:", my_backpack.items)
-# print("List of items currently in the backpack:", my_backpack._items)
+print("List of items currently in the backpack:", my_backpack.items)
+print("List of items currently in the backpack:", my_backpack._items)
 
 print("\nBackpack class access class attribute:", Backpack.max_num_items)
 print("my_backpack obect access class attribute:", my_backpack.max_num_items)
 
-my_backpack = Backpack()
+my_backpack = Backpack(items=["Wrench", "Screwdriver", "Drill Machine"])
 print("\nBefore modifying class attribute, default value declared inside class...")
 print("Max items via class:", Backpack.max_num_items)
 print("Max items via object:", my_backpack.max_num_items)
@@ -91,7 +102,12 @@ print("Max items via class:", Backpack.max_num_items)
 print("Max items via object:", my_backpack.max_num_items)
 
 print("\nName mangling...")
-# print("List of items currently in the backpack:", my_backpack.items)
-# print("List of items currently in the backpack:", my_backpack._items)
+print("List of items currently in the backpack:", my_backpack.items)
+print("List of items currently in the backpack:", my_backpack._items)
 # print("List of items currently in the backpack:", my_backpack.__items)
 print("List of items currently in the backpack:", my_backpack._Backpack__items)
+
+print("\nUsing getters and setters for items...")
+print("Backpack items via getter:", my_backpack.get_items())
+my_backpack.set_items(new_items=["Earphones", "Charger", "External HDD", "Laptop"])
+print("Backpack items set via setter:", my_backpack.get_items())

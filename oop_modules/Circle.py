@@ -55,7 +55,17 @@ class Circle:
             Eg: color="Blue"
         """
         self.radius = radius
+        self._radius = radius
         self.color = color
+
+    def get_radius(self):
+        return self._radius
+
+    def set_radius(self, new_radius):
+        if isinstance(new_radius, float) and new_radius > 0.0:
+            self._radius = new_radius
+        else:
+            print("Please enter a valid value for radius.")
 
 
 my_circle = Circle()
@@ -90,3 +100,8 @@ my_circle.name = "Ms. Ring"
 print("\nAfter modifying class attribute via object...")
 print("Name of the circle via class:", Circle.name)
 print("Name of the circle via object:", my_circle.name)
+
+print("\nUsing getters and setters for radius...")
+print("Circle radius via getter:", my_circle.get_radius())
+my_circle.set_radius(new_radius=69.0)
+print("Circle radius set via setter:", my_circle.get_radius())

@@ -69,6 +69,9 @@ class Movie:
 
         Movie.id_counter += 1
 
+    def get_id(self):
+        return self._id
+
 
 my_movie = Movie()
 print("\nDefault argument...")
@@ -103,3 +106,6 @@ print("Language:", my_movie.language)
 print("Rating:", my_movie.rating)
 # print("Movie id:", my_movie.id)
 print("Movie id:", my_movie._id)
+
+print("\nUsing getter method for id...")
+print("The movie id via getter:", my_movie.get_id())
