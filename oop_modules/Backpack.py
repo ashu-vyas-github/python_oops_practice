@@ -39,7 +39,7 @@ class Backpack:
 
     max_num_items = 10
 
-    def __init__(self, items=[]):
+    def __init__(self, items=[], num_shoulder_straps=2):
         """
         Backpack class constructor method for object initialization.
 
@@ -50,10 +50,14 @@ class Backpack:
         items : List
             Items that are contained in the backpack. Initially, it is empty.
             Eg: items=["Pen", "Waterbottle", "Blanket"]
+        num_shoulder_straps : Int
+            Number of straps available to carry the bag on shoulder.
+            Eg: num_shoulder_straps=2
         """
         self.items = items
         self._items = items
         self.__items = items
+        self._num_shoulder_straps = num_shoulder_straps
 
     def get_items(self):
         return self._items
@@ -63,6 +67,17 @@ class Backpack:
             self._items = new_items
         else:
             print("Enter a valid list type datatype of items.")
+
+    @property
+    def num_shoulder_straps(self):
+        return self._num_shoulder_straps
+
+    @num_shoulder_straps.setter
+    def num_shoulder_straps(self, new_num_straps):
+        if isinstance(new_num_straps, int) and new_num_straps > 0:
+            self._num_shoulder_straps = new_num_straps
+        else:
+            print("Please enter a valid number of straps.")
 
 
 my_backpack = Backpack()
@@ -111,3 +126,8 @@ print("\nUsing getters and setters for items...")
 print("Backpack items via getter:", my_backpack.get_items())
 my_backpack.set_items(new_items=["Earphones", "Charger", "External HDD", "Laptop"])
 print("Backpack items set via setter:", my_backpack.get_items())
+
+print("\nGetters and setters via property decorator...")
+print(f"Number of straps for the backpack: {my_backpack.num_shoulder_straps}")
+my_backpack.num_shoulder_straps = 99
+print(f"Updated number of straps: {my_backpack.num_shoulder_straps}")

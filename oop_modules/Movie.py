@@ -37,9 +37,16 @@ class Movie:
     (Placeholder for now, will be updated later.)
     """
 
-    id_counter = 1
+    uid_counter = 1
 
-    def __init__(self, title="The Godfather", year=1972, language="English", rating=9):
+    def __init__(
+        self,
+        title="The Godfather",
+        year=1972,
+        language="English",
+        rating=9,
+        num_accidents=0,
+    ):
         """
         Movie class constructor method for object initialization.
 
@@ -60,17 +67,33 @@ class Movie:
         rating : Int
             User-rating of the movie between 0 and 10.
             Eg: rating=9
+        num_accidents : Int
+            Total number of accidents occured while making the film.
+            Positive valued integer.
+            Eg: num_accidents=3
         """
-        self._id = Movie.id_counter
+        self._uid = Movie.uid_counter
         self.title = title
         self.year = year
         self.language = language
         self.rating = rating
+        self._num_accidents = num_accidents
 
-        Movie.id_counter += 1
+        Movie.uid_counter += 1
 
     def get_id(self):
-        return self._id
+        return self._uid
+
+    @property
+    def num_accidents(self):
+        return self._num_accidents
+
+    @num_accidents.setter
+    def num_accidents(self, new_num_accidents=0):
+        if isinstance(new_num_accidents, int) and new_num_accidents > 0:
+            self._num_accidents = new_num_accidents
+        else:
+            print("Enter only valid number of accidents.")
 
 
 my_movie = Movie()
@@ -80,8 +103,8 @@ print("Title:", my_movie.title)
 print("Year:", my_movie.year)
 print("Language:", my_movie.language)
 print("Rating:", my_movie.rating)
-# print("Movie id:", my_movie.id)
-print("Movie id:", my_movie._id)
+# print("Movie id:", my_movie.uid)
+print("Movie id:", my_movie._uid)
 
 my_movie = Movie(title="Fantastic Four", year=2005, language="English", rating=9)
 print("\nPassing argument...")
@@ -90,8 +113,8 @@ print("Title:", my_movie.title)
 print("Year:", my_movie.year)
 print("Language:", my_movie.language)
 print("Rating:", my_movie.rating)
-# print("Movie id:", my_movie.id)
-print("Movie id:", my_movie._id)
+# print("Movie id:", my_movie.uid)
+print("Movie id:", my_movie._uid)
 
 my_movie = Movie(title="Fantastic Four", year=2005, language="English", rating=9)
 my_movie.title = "Avengers: Endgame"
@@ -104,8 +127,13 @@ print("Title:", my_movie.title)
 print("Year:", my_movie.year)
 print("Language:", my_movie.language)
 print("Rating:", my_movie.rating)
-# print("Movie id:", my_movie.id)
-print("Movie id:", my_movie._id)
+# print("Movie id:", my_movie.uid)
+print("Movie id:", my_movie._uid)
 
 print("\nUsing getter method for id...")
 print("The movie id via getter:", my_movie.get_id())
+
+print("\nGetters and setters via property decorator...")
+print(f"Number of accidents occured while filming: {my_movie.num_accidents}")
+my_movie.num_accidents = 11
+print(f"Updated number of accidents: {my_movie.num_accidents}")
