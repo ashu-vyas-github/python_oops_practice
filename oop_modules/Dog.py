@@ -64,7 +64,7 @@ class Dog:
             Eg: social_security_code="89P13"
         """
         self.name = name
-        self.age = age
+        self._age = age
         self.breed = breed
         self._social_security_code = social_security_code
 
@@ -76,6 +76,17 @@ class Dog:
             self._social_security_code = new_ssc
         else:
             print("Please enter a valid SSC consisting of only letters and numbers.")
+
+    def get_age(self):
+        return self._age
+
+    def set_age(self, new_age):
+        if isinstance(new_age, int) and (0 < new_age < 30):
+            self._age = new_age
+        else:
+            print("Please enter a valid age value.")
+
+    age = property(get_age, set_age)
 
 
 my_dog = Dog()
@@ -110,6 +121,11 @@ my_dog.social_security_code = "9s5df6"
 print(f"New SSC is {my_dog.get_social_security_code()}")
 print(f"my_dog.social_security_code = {my_dog.social_security_code}")
 
-my_dog.passport_number = 89745667
-print(my_dog.passport_number)
+my_dog = Dog(age=14)
+print(my_dog.age)
+print(my_dog._age)
+print(my_dog.__dict__)
+my_dog.age = 28
+print(my_dog.age)
+print(my_dog._age)
 print(my_dog.__dict__)
