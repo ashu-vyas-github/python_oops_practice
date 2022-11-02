@@ -54,7 +54,6 @@ class Circle:
             Color of the perimeter/boundary of the circle.
             Eg: color="Blue"
         """
-        self.radius = radius
         self._radius = radius
         self.color = color
 
@@ -66,6 +65,8 @@ class Circle:
             self._radius = new_radius
         else:
             print("Please enter a valid value for radius.")
+
+    radius = property(get_radius, set_radius)
 
 
 my_circle = Circle()
@@ -105,3 +106,5 @@ print("\nUsing getters and setters for radius...")
 print("Circle radius via getter:", my_circle.get_radius())
 my_circle.set_radius(new_radius=69.0)
 print("Circle radius set via setter:", my_circle.get_radius())
+
+print(f"\nCircle radius via property method: {my_circle.radius}")
