@@ -68,6 +68,11 @@ class Circle:
 
     radius = property(get_radius, set_radius)
 
+    def calculate_diameter(self):
+        self._diameter = 2 * self._radius
+        print(f"The diameter of the circle: {self._diameter} units")
+        return self._diameter
+
 
 my_circle = Circle()
 print("\nDefault argument...")
@@ -108,3 +113,6 @@ my_circle.set_radius(new_radius=69.0)
 print("Circle radius set via setter:", my_circle.get_radius())
 
 print(f"\nCircle radius via property method: {my_circle.radius}")
+
+print("\nAdd methods to class...")
+my_circle.calculate_diameter()
