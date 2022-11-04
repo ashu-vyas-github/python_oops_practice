@@ -116,3 +116,9 @@ print(f"\nCircle radius via property method: {my_circle.radius}")
 
 print("\nAdd methods to class...")
 my_circle.calculate_diameter()
+
+print("\nUsing id() function...")
+one_circle = Circle()
+two_circle = Circle()
+print(one_circle is two_circle)
+print(one_circle == two_circle)

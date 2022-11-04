@@ -175,3 +175,6 @@ print(f"{rm_im} removed. Updated list: {my_backpack.items}")
 
 my_backpack.add_multiple_items(mult_items=["Waterbottle", "Pen", "Pencil", "Eraser"])
 print("Adding multiple items simultaneously. Updated list:", my_backpack.items)
+
+print("\nUsing the id() function...")
+print(f"The id of backpack object: {id(my_backpack)}")
